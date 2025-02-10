@@ -21,5 +21,9 @@
         "@codeceptjs/ui": "^1.2.0",
         "codeceptjs": "^3.6.10",
         "webdriverio": "^8.41.0"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.7",
+        "mssql": "^11.0.1"
     }
 }

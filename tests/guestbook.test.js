@@ -2,7 +2,7 @@ Feature ('Guestbook Feature');
 
 Scenario('I can create a guest book entry', async ({I, personOrbituaryPage}) => {
     // ======= TEST DATA =======
-    const expectedDecedentName = 'Virginia';
+    const personOrbituaryData = await I.getJanusPersonRecord()
     const guestbookEntryData = {
         message: 'I am so sorry for the loss',
         senderName: 'QA Auto',
@@ -12,11 +12,11 @@ Scenario('I can create a guest book entry', async ({I, personOrbituaryPage}) => 
 
     // ======= TEST STEPS =======
     // 1. Open the page
-    I.amOnPage('/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379')
+    I.amOnPage(`/us/obituaries/chicagotribune/name/${personOrbituaryData.FirstName}-${personOrbituaryData.LastName}-obituary?pid=${personOrbituaryData.PersonId}`)
     personOrbituaryPage.waitForDecedentNameHeading()
 
     // 2. Assert that the decedent's first name appears in the Name section
-    personOrbituaryPage.verifyDecedentNameIsDisplayed(expectedDecedentName)
+    personOrbituaryPage.verifyDecedentNameIsDisplayed(personOrbituaryData.FirstName)
 
     // 3&4. Leave a Guest Book entry
     personOrbituaryPage.createGuestBookEntry(guestbookEntryData);
