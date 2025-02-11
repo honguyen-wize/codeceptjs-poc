@@ -38,6 +38,10 @@ exports.config = {
       require: './helpers/SQLHelper.js',
     }
   },
+  gherkin:{
+    features: './features/*.feature',
+    steps: ['./step_definitions/steps.js']
+  },
   include: {
     I: './steps_file.js',
     personOrbituaryPage: "./pages/PersonOrbituaryPage.js",
