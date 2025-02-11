@@ -20,6 +20,7 @@
         "@codeceptjs/examples": "^1.2.4",
         "@codeceptjs/ui": "^1.2.0",
         "codeceptjs": "^3.6.10",
+        "codeceptjs-chai": "^2.3.5",
         "webdriverio": "^8.41.0"
     },
     "dependencies": {
