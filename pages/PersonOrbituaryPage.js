@@ -37,7 +37,8 @@ class personOrbituaryPage {
     I.forceClick(this.guestBookFormFields.guestBookFormSubmitButton)
   }
 
-  verifyIfTheGuestBookEntryIsCreated (guestbookSuccessMessageText) {    
+  verifyIfTheGuestBookEntryIsCreated (guestbookSuccessMessageText) {  
+    I.waitForElement(this.guestBookSuccessMessage)
     I.waitForVisible(this.guestBookSuccessMessage)
     I.see(guestbookSuccessMessageText, this.guestBookSuccessMessage)
   }
