@@ -2,6 +2,7 @@ const { I } = inject();
 
 class personOrbituaryPage {
   // ======= LOCATORS =======
+  
   constructor() {
     this.decedentNameHeading = '[data-component="NameHeadingText"]',
     this.guestBookForm = {id: 'guestbook-form'},
@@ -37,7 +38,7 @@ class personOrbituaryPage {
   }
 
   verifyIfTheGuestBookEntryIsCreated (guestbookSuccessMessageText) {    
-    I.waitForElement(this.guestBookSuccessMessage)
+    I.waitForVisible(this.guestBookSuccessMessage)
     I.see(guestbookSuccessMessageText, this.guestBookSuccessMessage)
   }
 }

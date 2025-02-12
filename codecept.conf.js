@@ -23,6 +23,9 @@ exports.config = {
         }
       }
     },
+    SQLHelper: {
+      require: './helpers/SQLHelper.js',
+    },
   },
   include: {
     I: './steps_file.js',
