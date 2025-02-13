@@ -1,4 +1,6 @@
-Feature ('API Orbituary Feature');
+Feature ('API Orbituary Feature')
+    .tag('@rest')
+    .tag("@janus")
 
 let obituariesData = new DataTable(['obituaryUrl', 'expectedStatusCode', 'expectedStatusText'])
 obituariesData.add(['/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379', 200, 'OK'])

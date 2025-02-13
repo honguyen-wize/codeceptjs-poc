@@ -1,4 +1,7 @@
-Feature ('Guestbook Feature');
+Feature ('Guestbook Feature')
+    .tag('@webdriver')
+    .tag("@guestbook")
+    .tag("@janus")
 
 Scenario('I can create a guest book entry', async ({I, personOrbituaryPage}) => {
     // ======= TEST DATA =======
@@ -12,7 +15,7 @@ Scenario('I can create a guest book entry', async ({I, personOrbituaryPage}) => 
 
     // ======= TEST STEPS =======
     // 1. Open the page
-    I.amOnPage(`/us/obituaries/chicagotribune/name/${personOrbituaryData.FirstName}-${personOrbituaryData.LastName}-obituary?pid=${personOrbituaryData.PersonId}`)
+    I.amOnPage(`/us/obituaries/${personOrbituaryData.Source.toLowerCase()}/name/${personOrbituaryData.FirstName.toLowerCase()}-${personOrbituaryData.LastName.toLowerCase()}-obituary?pid=${personOrbituaryData.PersonId}`)
     personOrbituaryPage.waitForDecedentNameHeading()
 
     // 2. Assert that the decedent's first name appears in the Name section
@@ -23,4 +26,4 @@ Scenario('I can create a guest book entry', async ({I, personOrbituaryPage}) => 
 
     // 5. Verify if the Guest Book entry is created
     personOrbituaryPage.verifyIfTheGuestBookEntryIsCreated(guestbookSuccessMessageText)
-})
+}).tag('@prodsafe')
