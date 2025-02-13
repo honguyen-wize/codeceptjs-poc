@@ -38,7 +38,7 @@ class personOrbituaryPage {
   }
 
   verifyIfTheGuestBookEntryIsCreated (guestbookSuccessMessageText) {    
-    I.waitForVisible(this.guestBookSuccessMessage)
+    I.waitForVisible(this.guestBookSuccessMessage, 3)
     I.see(guestbookSuccessMessageText, this.guestBookSuccessMessage)
   }
 }
