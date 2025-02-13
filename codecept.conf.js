@@ -23,9 +23,20 @@ exports.config = {
         }
       }
     },
+    REST: {
+      endpoint: 'https://www.qa-legacy.com',
+      defaultHeaders: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      prettyPrintJson: true
+    },
+    ChaiWrapper: {
+      require: 'codeceptjs-chai'
+    },
     SQLHelper: {
       require: './helpers/SQLHelper.js',
-    },
+    }
   },
   include: {
     I: './steps_file.js',
