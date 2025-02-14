@@ -1,4 +1,7 @@
-Feature ('Guestbook Feature');
+Feature ('Guestbook Feature')
+    .tag('@webdriver')
+    .tag("@guestbook")
+    .tag("@janus")
 
 Scenario('I can create a guest book entry', async ({I, personOrbituaryPage}) => {
     // ======= TEST DATA =======
@@ -23,4 +26,4 @@ Scenario('I can create a guest book entry', async ({I, personOrbituaryPage}) => 
 
     // 5. Verify if the Guest Book entry is created
     personOrbituaryPage.verifyIfTheGuestBookEntryIsCreated(guestbookSuccessMessageText)
-})
+}).tag('@prodsafe')
