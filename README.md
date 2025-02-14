@@ -23,5 +23,14 @@ To run tests that are safe to execute in a production environment, use:
 - `npx codeceptjs run --grep '@prodsafe'`
 
 ### Run the BDD tests
+#### Run all BDD tests
+- `npx codeceptjs run --features --steps`
+
+#### Run BDD tests by tag
+- `npx codeceptjs run --features --steps --grep '@orbituary'`
+
+- `npx codeceptjs run --features --steps --grep '@orbit_api'`
+
+#### Run BDD tests by feature
 - `npx codeceptjs run --features features/orbituary.feature --steps`
 - `npx codeceptjs run --features features/orbituary_api.feature --steps`

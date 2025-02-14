@@ -1,3 +1,4 @@
+@orbit_api
 Feature: API Orbituary Feature
     As a user
     I want to get a person obituary record from API

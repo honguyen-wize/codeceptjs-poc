@@ -1,3 +1,4 @@
+@orbituary
 Feature: Orbituary Feature
     In order to leave a message for the deceased
     As a user
