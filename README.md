@@ -1,4 +1,4 @@
-## Installation
+## Installation Guide
 - `npm install`
 
 ## Run the tests
