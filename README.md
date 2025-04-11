@@ -1,4 +1,4 @@
-## Installation
+## Installation Dependencies
 - `npm install`
 
 ## Run the tests
